@@ -11,4 +11,14 @@ export default class Employee extends Person {
     console.log(`-- ${this.firstName} worked for ${howMany} hours`);
     this.hoursWorked += howMany;
   }
+
+  public override calcPay(): number {
+    // console.log('skaiciuojam alga');
+    // paskaiciuoti kiek gaunasi isdirbtas val padauginus is valandinio
+    const alga = this.hoursWorked * this.hourlyPay;
+    console.log(`-- ${this.firstName} ismoketi ${alga.toFixed(2)}eur`);
+    // nunulinti valandas
+    this.hoursWorked = 0;
+    return alga;
+  }
 }

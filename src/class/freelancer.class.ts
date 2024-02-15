@@ -1,5 +1,5 @@
-import MyTask from './myTask.class';
-import Person from './person.class';
+import MyTask from './myTask.class.js';
+import Person from './person.class.js';
 
 export default class Freelancer extends Person {
   private jobs: MyTask[] = [];
@@ -20,4 +20,6 @@ export default class Freelancer extends Person {
     console.table(this.jobs);
     // console.log(JSON.stringify(this.#jobs, null, 2));
   }
+
+  override calcPay(): void {}
 }

@@ -1,5 +1,6 @@
 export default class MyTask {
-  public id: number = 1;
+  private static count = 0;
+  public id: number = ++MyTask.count;
   public isDone: boolean = false;
   constructor(public title: string, public amount: number) {}
 }
