@@ -22,6 +22,26 @@ class Student extends Person {
         this.studyYear = studyYear;
     }
 }
+class Darbuotojas extends Person {
+    constructor(name, age, town, hasCar, workPlace, pareigos) {
+        super(name, age, town, hasCar);
+        this.workPlace = workPlace;
+        this.pareigos = pareigos;
+    }
+}
+const w1 = new Darbuotojas('Jill', 33, 'Vilnius', true, 'Vilniaus bokstas', 'personalas');
+w1.info();
+console.log('w1 ===', w1);
+class Vadovas extends Darbuotojas {
+    constructor(name, age, town, hasCar, workPlace) {
+        super(name, age, town, hasCar, workPlace, 'vadovas');
+        this.emploees = [];
+    }
+    addEmployee(em) {
+        this.emploees.push(em);
+    }
+}
+new Vadovas('James', 45, 'Klp', false, 'Uostas');
 class Employee extends Person {
     constructor(name, age, town, hasCar, workPlace, position) {
         super(name, age, town, hasCar);

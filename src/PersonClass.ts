@@ -10,6 +10,11 @@ interface StudentInterface extends PersontInterface {
   studyYear: number;
 }
 
+interface DarbuotojasInterface extends PersontInterface {
+  workPlace: string;
+  pareigos: 'personalas' | 'vadovas' | 'direktorius';
+}
+
 class Person implements PersontInterface {
   // spec funkcija kuri yra paleidzima kai sukuriamas objektas
   constructor(
@@ -46,6 +51,22 @@ class Student extends Person implements StudentInterface {
 }
 
 // sukurti klase Darbuotojas
+class Darbuotojas extends Person implements DarbuotojasInterface {
+  constructor(
+    name: string,
+    age: number,
+    town: string,
+    hasCar: boolean,
+    public workPlace: DarbuotojasInterface['workPlace'],
+    public pareigos: DarbuotojasInterface['pareigos'],
+  ) {
+    super(name, age, town, hasCar);
+  }
+}
+
+const w1 = new Darbuotojas('Jill', 33, 'Vilnius', true, 'Vilniaus bokstas', 'personalas');
+w1.info();
+console.log('w1 ===', w1);
 // Darbuotojas paveldi klase Person
 // sukurti DarbuotojasInterface kuris paveldi viska is PersonInterface
 // ir prideda savybe workPlace im pavadinimas
@@ -53,7 +74,26 @@ class Student extends Person implements StudentInterface {
 // sukurti nauja objektas ir paziureti ar gaunam tinkama objekta
 
 // Sukurti klase Vadovas
-// Vadovas paveldi Employee ir jos position yra Vadovas
+class Vadovas extends Darbuotojas {
+  public emploees: DarbuotojasInterface[];
+  constructor(
+    name: string,
+    age: number,
+    town: string,
+    hasCar: boolean,
+    workPlace: DarbuotojasInterface['workPlace'],
+  ) {
+    super(name, age, town, hasCar, workPlace, 'vadovas');
+    this.emploees = [];
+  }
+
+  addEmployee(em: DarbuotojasInterface) {
+    this.emploees.push(em);
+  }
+}
+
+new Vadovas('James', 45, 'Klp', false, 'Uostas');
+// Vadovas paveldi Darbuotojas ir jos position yra Vadovas
 // sukurti interface
 // papildomai Vadovas turi emploees darbuotoju jam dirbanciu masyva
 
