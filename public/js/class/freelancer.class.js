@@ -13,6 +13,9 @@ export default class Freelancer extends Person {
         this.jobs.push(newJob);
         console.table(this.jobs);
     }
-    calcPay() { }
+    completeTaskFromArr() {
+    }
+    calcPay() {
+    }
 }
 //# sourceMappingURL=freelancer.class.js.map

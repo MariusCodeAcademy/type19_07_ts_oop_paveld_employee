@@ -21,5 +21,13 @@ export default class Freelancer extends Person {
     // console.log(JSON.stringify(this.#jobs, null, 2));
   }
 
-  override calcPay(): void {}
+  public completeTaskFromArr() {
+    // task uzbaigimo logika
+  }
+
+  override calcPay() {
+    // atlyginimo apskaiciavimas
+    // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
+    // isimti is darbu masyvo atliktus darbus
+  }
 }
