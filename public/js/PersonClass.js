@@ -22,6 +22,13 @@ class Student extends Person {
         this.studyYear = studyYear;
     }
 }
+class Employee extends Person {
+    constructor(name, age, town, hasCar, workPlace, position) {
+        super(name, age, town, hasCar);
+        this.workPlace = workPlace;
+        this.position = position;
+    }
+}
 const st1 = new Student('Serbentautas', 27, 'Kaunas', true, 'Coledge', 2);
 console.log('st1 ===', st1);
 st1.info();

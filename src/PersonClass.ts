@@ -52,6 +52,29 @@ class Student extends Person implements StudentInterface {
 // ir prideda savybe pareigos: gali buti personalas, vadovas, direktorius
 // sukurti nauja objektas ir paziureti ar gaunam tinkama objekta
 
+// Sukurti klase Vadovas
+// Vadovas paveldi Employee ir jos position yra Vadovas
+// sukurti interface
+// papildomai Vadovas turi emploees darbuotoju jam dirbanciu masyva
+
+class Employee extends Person implements EmployeeInterface {
+  constructor(
+    name: string,
+    age: number,
+    town: string,
+    hasCar: boolean,
+    public workPlace: string,
+    public position: 'Personalas' | 'Vadovas' | 'Direktorius',
+  ) {
+    super(name, age, town, hasCar);
+  }
+}
+
+interface EmployeeInterface extends PersontInterface {
+  workPlace: string;
+  position: 'Personalas' | 'Vadovas' | 'Direktorius';
+}
+
 const st1 = new Student('Serbentautas', 27, 'Kaunas', true, 'Coledge', 2);
 console.log('st1 ===', st1);
 st1.info();
