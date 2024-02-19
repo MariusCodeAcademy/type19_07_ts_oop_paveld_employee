@@ -21,4 +21,9 @@ export default class Employee extends Person {
     this.hoursWorked = 0;
     return alga;
   }
+
+  // suteikiam galimybe gauti privacia reiksme ir apsaugo nuo jos pakeitimo
+  public get payPerHour(): number {
+    return this.hourlyPay;
+  }
 }

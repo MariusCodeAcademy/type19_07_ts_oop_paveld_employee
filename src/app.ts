@@ -1,3 +1,4 @@
+import UI from './class/UI.class.js';
 import Employee from './class/employee.class.js';
 import Freelancer from './class/freelancer.class.js';
 import MyTask from './class/myTask.class.js';
@@ -9,7 +10,8 @@ const workingPplArr: Employee[] = [
   new Employee('James', 'Bond', 100),
   new Employee('Mike', 'dow', 50),
 ];
-
+UI.addOneEmpl(workingPplArr[0]);
+UI.addOneEmpl(workingPplArr[1]);
 console.table(workingPplArr);
 
 workingPplArr[0].work(80);
