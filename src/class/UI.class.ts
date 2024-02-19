@@ -4,7 +4,7 @@ import Freelancer from './freelancer.class.js';
 
 export default class UI {
   private employeeUlEl: HTMLUListElement | null = document.getElementById(
-    'empl1',
+    'empl',
   ) as HTMLUListElement | null;
   private freelancerUlEl = document.getElementById('freec') as HTMLUListElement | null;
 

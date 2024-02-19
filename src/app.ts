@@ -6,12 +6,14 @@ import Person from './class/person.class.js';
 
 console.log('Hello from app.ts!');
 
+const ui = new UI();
+
 const workingPplArr: Employee[] = [
   new Employee('James', 'Bond', 100),
   new Employee('Mike', 'dow', 50),
 ];
-UI.addOneEmpl(workingPplArr[0]);
-UI.addOneEmpl(workingPplArr[1]);
+ui.addOneEmpl(workingPplArr[0]);
+ui.addOneEmpl(workingPplArr[1]);
 console.table(workingPplArr);
 
 workingPplArr[0].work(80);
@@ -33,6 +35,9 @@ console.table(workingPplArr);
 
 const freeArr: Freelancer[] = [new Freelancer('Tom', 'Cruise'), new Freelancer('Bob', 'Marley')];
 console.table(freeArr);
+
+ui.addOneFreeL(freeArr[0]);
+ui.addOneFreeL(freeArr[1]);
 
 const tasksArr: MyTask[] = [
   new MyTask('footer', 500),
