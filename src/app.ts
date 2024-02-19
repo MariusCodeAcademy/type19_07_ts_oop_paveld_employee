@@ -41,4 +41,7 @@ freeArr[0].assingJob(tasksArr[0]);
 freeArr[0].assingJob(tasksArr[1]);
 console.table(freeArr);
 
+freeArr[0].completeTaskFromArr(tasksArr[0].id);
+
 console.table(tasksArr);
+console.log('freeArr[0] ===', freeArr[0]);

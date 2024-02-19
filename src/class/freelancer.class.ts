@@ -21,13 +21,19 @@ export default class Freelancer extends Person {
     // console.log(JSON.stringify(this.#jobs, null, 2));
   }
 
-  public completeTaskFromArr() {
+  public completeTaskFromArr(idToComplete: number): void {
     // task uzbaigimo logika
+    // sukti cikla per darbu masyva, surasti darba su id lygiu idToComplete ir padaryti ji baigtu
+    const found: MyTask | undefined = this.jobs.find((jObj) => jObj.id === idToComplete);
+    // found arba radom arba ne
+    if (found === undefined) return console.warn('neradom objekto su id', idToComplete);
+    found.isDone = true;
   }
 
-  // override calcPay() {
-  //   // atlyginimo apskaiciavimas
-  //   // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
-  //   // isimti is darbu masyvo atliktus darbus
-  // }
+  calcPay(): number {
+    // atlyginimo apskaiciavimas
+    // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
+    // isimti is darbu masyvo atliktus darbus
+    return 0;
+  }
 }

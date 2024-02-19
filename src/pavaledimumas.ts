@@ -125,3 +125,6 @@ st1.info();
 // user3.changeTown('Exeter');
 
 // console.log('user3 ===', user3);
+// let obj: { isDone: boolean } | undefined = { isDone: false };
+// obj = undefined;
+// obj?.isDone = true;
