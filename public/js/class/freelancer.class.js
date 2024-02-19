@@ -20,7 +20,10 @@ export default class Freelancer extends Person {
         found.isDone = true;
     }
     calcPay() {
-        return 0;
+        const completedTasks = this.jobs.filter(() => { });
+        const sum = 0;
+        this.jobs = this.jobs.filter(() => { });
+        return sum;
     }
 }
 //# sourceMappingURL=freelancer.class.js.map
