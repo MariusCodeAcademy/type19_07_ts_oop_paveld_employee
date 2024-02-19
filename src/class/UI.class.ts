@@ -23,6 +23,9 @@ export default class UI {
   </li>
   */
   public addOneEmpl(emObj: Employee) {
+    if (!(emObj instanceof Employee)) {
+      return console.warn(emObj, 'is not Freelancer object');
+    }
     // sukurti li ir patalpinti ji employeeUlEl
     const liEl = createHtmlEL<HTMLUListElement>('li', {
       class: 'list-group-item d-flex  justify-content-between justy gap-2 align-items-center',
@@ -38,6 +41,9 @@ export default class UI {
   }
 
   public addOneFreeL(freeObj: Freelancer) {
+    if (!(freeObj instanceof Freelancer)) {
+      return console.warn(freeObj, 'is not Freelancer object');
+    }
     const liEl = createHtmlEL<HTMLUListElement>('li', {
       class: 'list-group-item d-flex  justify-content-between justy gap-2 align-items-center',
     });

@@ -2,7 +2,6 @@ import UI from './class/UI.class.js';
 import Employee from './class/employee.class.js';
 import Freelancer from './class/freelancer.class.js';
 import MyTask from './class/myTask.class.js';
-import Person from './class/person.class.js';
 
 console.log('Hello from app.ts!');
 
@@ -38,6 +37,7 @@ console.table(freeArr);
 
 ui.addOneFreeL(freeArr[0]);
 ui.addOneFreeL(freeArr[1]);
+// ui.addOneFreeL(freeArr[2]);
 
 const tasksArr: MyTask[] = [
   new MyTask('footer', 500),
