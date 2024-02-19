@@ -33,7 +33,7 @@ export default class Freelancer extends Person {
   calcPay(): number {
     // atlyginimo apskaiciavimas
     // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
-    const completedTasks: MyTask[] = this.jobs.filter(() => {});
+    const completedTasks: MyTask[] = this.jobs.filter((jObj) => jObj.isDone === true);
     const sum: number = 0; // reduce
     // isimti is darbu masyvo atliktus darbus
     this.jobs = this.jobs.filter(() => {});
