@@ -17,7 +17,7 @@ export default class Freelancer extends Person {
       return;
     }
     this.jobs.push(newJob);
-    console.table(this.jobs);
+    // console.table(this.jobs);
     // console.log(JSON.stringify(this.#jobs, null, 2));
   }
 
@@ -34,7 +34,7 @@ export default class Freelancer extends Person {
     // atlyginimo apskaiciavimas
     // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
     const completedTasks: MyTask[] = this.jobs.filter((jObj) => jObj.isDone === true);
-    console.log('completedTasks ===', completedTasks);
+    // console.log('completedTasks ===', completedTasks);
     const sum: number = completedTasks.reduce((total, jObj) => total + jObj.amount, 0); // reduce
     // isimti is darbu masyvo atliktus darbus
     this.jobs = this.jobs.filter((jObj) => jObj.isDone === false);

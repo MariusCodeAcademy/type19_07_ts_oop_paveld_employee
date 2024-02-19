@@ -91,7 +91,26 @@ export default class UI {
     });
   }
 
+  /*
+  <tr>
+    <td>Mike</td>
+    <td>500</td>
+  </tr>
+  */
   public printAlgos(arr: (Employee | Freelancer)[]) {
     // arr[0].calcPay
+    const algosBodyEl = document.getElementById('algos-body') as HTMLTableSectionElement | null;
+
+    arr.forEach((workerObj) => {
+      const trEl = document.createElement('tr');
+      const nameCell = createHtmlEL<HTMLTableCellElement>('td', {}, workerObj.printFullName());
+      const payCell = createHtmlEL<HTMLTableCellElement>(
+        'td',
+        {},
+        `$${workerObj.calcPay().toFixed(2)}`,
+      );
+      trEl.append(nameCell, payCell);
+      algosBodyEl?.append(trEl);
+    });
   }
 }

@@ -8,7 +8,7 @@ export default abstract class Person {
 
   printFullName(): string {
     const prisistatymas = `${this.firstName} ${this.lastName}`;
-    console.log(prisistatymas);
+    // console.log(prisistatymas);
     return prisistatymas;
   }
 
