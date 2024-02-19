@@ -1,12 +1,15 @@
 import createHtmlEL from '../helper/createEl.js';
 import Employee from './employee.class.js';
+import Freelancer from './freelancer.class.js';
 
 export default class UI {
-  private static employeeUlEl = document.getElementById('empl') as HTMLUListElement | null;
-  private static freelancerUlEl = document.getElementById('freec') as HTMLUListElement | null;
+  private employeeUlEl: HTMLUListElement | null = document.getElementById(
+    'empl1',
+  ) as HTMLUListElement | null;
+  private freelancerUlEl = document.getElementById('freec') as HTMLUListElement | null;
 
   constructor() {
-    if (UI.employeeUlEl === null || UI.freelancerUlEl === null) {
+    if (this.employeeUlEl === null || this.freelancerUlEl === null) {
       console.warn('nepataikem i elementus');
     }
   }
@@ -19,7 +22,7 @@ export default class UI {
     <p class="mb-0">Pay</p>
   </li>
   */
-  public static addOneEmpl(emObj: Employee) {
+  public addOneEmpl(emObj: Employee) {
     // sukurti li ir patalpinti ji employeeUlEl
     const liEl = createHtmlEL<HTMLUListElement>('li', {
       class: 'list-group-item d-flex  justify-content-between justy gap-2 align-items-center',
@@ -31,6 +34,16 @@ export default class UI {
       emObj.payPerHour.toString(),
     );
     liEl.append(titleEL, payEl);
-    UI.employeeUlEl?.append(liEl);
+    this.employeeUlEl?.append(liEl);
+  }
+
+  public addOneFreeL(freeObj: Freelancer) {
+    const liEl = createHtmlEL<HTMLUListElement>('li', {
+      class: 'list-group-item d-flex  justify-content-between justy gap-2 align-items-center',
+    });
+    const titleEL = createHtmlEL<HTMLHeadElement>('h3', { class: 'fs-5' }, freeObj.printFullName());
+    const payEl = createHtmlEL<HTMLParagraphElement>('p', { class: 'mb-0' }, freeObj.toString());
+    liEl.append(titleEL, payEl);
+    this.freelancerUlEl?.append(liEl);
   }
 }
