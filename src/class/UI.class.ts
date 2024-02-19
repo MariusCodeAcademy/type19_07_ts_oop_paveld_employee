@@ -64,8 +64,34 @@ export default class UI {
     this.freelancerUlEl?.append(liEl);
   }
 
-  public addHoursUI() {
+  public addHoursUI(arr: Employee[]) {
     // nusitaikyti i forma
+    const formEl = document.getElementById('add-hours') as HTMLFormElement | null;
+    const selEl = document.getElementById('empl-sel') as HTMLSelectElement | null;
+    const hoursCountEl = document.getElementById('how-many-hours') as HTMLInputElement | null;
     // paimti reiksmes is select ir input
+
+    if (formEl === null || selEl === null || hoursCountEl === null) {
+      throw new Error('neradom formos elementu');
+    }
+
+    // uzdeti formai event listeneri
+    formEl.addEventListener('submit', (event): void => {
+      event.preventDefault();
+      // pateikiant forma iskonsolinti  selecto id ir kiek val prideti
+      const selectEmlId = selEl.value;
+      const howManyHours: number = hoursCountEl.valueAsNumber || 0;
+      console.log('selectEmlId ===', selectEmlId);
+      console.log('howManyHours ===', howManyHours);
+      const found = arr.find((emObj) => emObj.id === +selectEmlId);
+      if (found === undefined) return console.warn('nerastas objetas ');
+      found.work(howManyHours);
+      console.table(arr);
+      formEl.reset();
+    });
+  }
+
+  public printAlgos(arr: (Employee | Freelancer)[]) {
+    // arr[0].calcPay
   }
 }
