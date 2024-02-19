@@ -10,10 +10,12 @@ const ui = new UI();
 const workingPplArr: Employee[] = [
   new Employee('James', 'Bond', 100),
   new Employee('Mike', 'dow', 50),
+  new Employee('Serbentauas', 'B', 25),
 ];
 ui.renderEmplSelect(workingPplArr);
 ui.addOneEmpl(workingPplArr[0]);
 ui.addOneEmpl(workingPplArr[1]);
+ui.addOneEmpl(workingPplArr[2]);
 console.table(workingPplArr);
 
 workingPplArr[0].work(80);
@@ -35,7 +37,7 @@ console.table(workingPplArr);
 
 const freeArr: Freelancer[] = [new Freelancer('Tom', 'Cruise'), new Freelancer('Bob', 'Marley')];
 console.table(freeArr);
-
+// ui.renderEmplSelect(freeArr); // neveikia
 ui.addOneFreeL(freeArr[0]);
 ui.addOneFreeL(freeArr[1]);
 // ui.addOneFreeL(freeArr[2]);

@@ -20,7 +20,7 @@ export default class UI {
     arr.forEach((empObj) => {
       const opt = createHtmlEL<HTMLOptionElement>(
         'option',
-        { value: empObj.printFullName() },
+        { value: empObj.id.toString() },
         empObj.printFullName(),
       );
       selEl.append(opt);
