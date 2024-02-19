@@ -34,14 +34,16 @@ console.table(freeArr);
 const tasksArr: MyTask[] = [
   new MyTask('footer', 500),
   new MyTask('header', 300),
-  new MyTask('main', 300),
+  new MyTask('main', 400),
   new MyTask('section', 300),
 ];
 freeArr[0].assingJob(tasksArr[0]);
 freeArr[0].assingJob(tasksArr[1]);
+freeArr[0].assingJob(tasksArr[2]);
 console.table(freeArr);
 
 freeArr[0].completeTaskFromArr(tasksArr[0].id);
+freeArr[0].completeTaskFromArr(tasksArr[2].id);
 const pay = freeArr[0].calcPay();
 console.log('pay ===', pay);
 console.log('freeArr[0] ===', freeArr[0]);
