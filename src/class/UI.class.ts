@@ -63,4 +63,9 @@ export default class UI {
     liEl.append(titleEL, payEl);
     this.freelancerUlEl?.append(liEl);
   }
+
+  public addHoursUI() {
+    // nusitaikyti i forma
+    // paimti reiksmes is select ir input
+  }
 }

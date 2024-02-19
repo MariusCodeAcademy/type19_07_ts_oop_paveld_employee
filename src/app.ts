@@ -7,6 +7,16 @@ console.log('Hello from app.ts!');
 
 const ui = new UI();
 
+// nusitaikyti i forma
+const formEl = document.getElementById('add-hours') as HTMLFormElement | null;
+const selEl = document.getElementById('empl-sel') as HTMLSelectElement | null;
+const hoursCountEl = document.getElementById('how-many-hours') as HTMLInputElement | null;
+// paimti reiksmes is select ir input
+
+// uzdeti formai event listeneri
+// pateikiant forma iskonsolinti  selecto id ir kiek val prideti
+// pateikiant forma iskonsolinti darbuotojo objekta
+
 const workingPplArr: Employee[] = [
   new Employee('James', 'Bond', 100),
   new Employee('Mike', 'dow', 50),
