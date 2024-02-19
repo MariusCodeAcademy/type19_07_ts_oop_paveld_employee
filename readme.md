@@ -1,8 +1,5 @@
-# Steps
+# Praktika
 
-## free lancer
-
-1. CAO
-2. ![](assets/2024-02-15-12-11-35.png)
-3. ![](assets/2024-02-15-12-11-55.png)
-4. isbandyti ar veikia
+1. CAO 10
+2. pabaigti ![](assets/2024-02-19-12-01-17.png)
+3. pratesti iki galo freelanceriu darbu atlikima
