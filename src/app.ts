@@ -5,28 +5,29 @@ import Person from './class/person.class.js';
 
 console.log('Hello from app.ts!');
 
-// const workingPplArr: Employee[] = [
-//   new Employee('James', 'Bond', 100),
-//   new Employee('Mike', 'dow', 50),
-// ];
-// console.table(workingPplArr);
+const workingPplArr: Employee[] = [
+  new Employee('James', 'Bond', 100),
+  new Employee('Mike', 'dow', 50),
+];
 
-// workingPplArr[0].work(80);
-// workingPplArr[1].work(100);
-// console.table(workingPplArr);
+console.table(workingPplArr);
 
-// // workingPplArr.forEach((emObj) => {
-// //   console.log('alga', emObj.calcPay());
-// // });
+workingPplArr[0].work(80);
+workingPplArr[1].work(100);
+console.table(workingPplArr);
 
-// const nameAndPay: { name: string; pay: number }[] = workingPplArr.map((emObj) => {
-//   return {
-//     name: emObj.printFullName(),
-//     pay: emObj.calcPay(),
-//   };
+// workingPplArr.forEach((emObj) => {
+//   console.log('alga', emObj.calcPay());
 // });
-// console.log('nameAndPay ===', nameAndPay);
-// console.table(workingPplArr);
+
+const nameAndPay: { name: string; pay: number }[] = workingPplArr.map((emObj) => {
+  return {
+    name: emObj.printFullName(),
+    pay: emObj.calcPay(),
+  };
+});
+console.log('nameAndPay ===', nameAndPay);
+console.table(workingPplArr);
 
 const freeArr: Freelancer[] = [new Freelancer('Tom', 'Cruise'), new Freelancer('Bob', 'Marley')];
 console.table(freeArr);
@@ -37,6 +38,7 @@ const tasksArr: MyTask[] = [
   new MyTask('main', 400),
   new MyTask('section', 300),
 ];
+
 freeArr[0].assingJob(tasksArr[0]);
 freeArr[0].assingJob(tasksArr[1]);
 freeArr[0].assingJob(tasksArr[2]);
