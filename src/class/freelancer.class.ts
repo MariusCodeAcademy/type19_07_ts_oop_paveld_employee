@@ -25,9 +25,9 @@ export default class Freelancer extends Person {
     // task uzbaigimo logika
   }
 
-  override calcPay() {
-    // atlyginimo apskaiciavimas
-    // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
-    // isimti is darbu masyvo atliktus darbus
-  }
+  // override calcPay() {
+  //   // atlyginimo apskaiciavimas
+  //   // atrinkti tik atliktus darbus, ir paskaiciuoti ju suma (grazinti)
+  //   // isimti is darbu masyvo atliktus darbus
+  // }
 }

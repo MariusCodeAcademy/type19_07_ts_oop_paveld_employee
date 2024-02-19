@@ -15,7 +15,5 @@ export default class Freelancer extends Person {
     }
     completeTaskFromArr() {
     }
-    calcPay() {
-    }
 }
 //# sourceMappingURL=freelancer.class.js.map

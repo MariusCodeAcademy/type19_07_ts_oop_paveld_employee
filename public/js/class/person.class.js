@@ -8,9 +8,6 @@ export default class Person {
         console.log(prisistatymas);
         return prisistatymas;
     }
-    calcPay() {
-        throw new Error('reikia aprasyti calcPay');
-    }
 }
 console.log('EmployeeClass was loaded');
 //# sourceMappingURL=person.class.js.map

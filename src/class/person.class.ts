@@ -1,4 +1,4 @@
-export default class Person {
+export default abstract class Person {
   // protected - pasiekiama is sios ir paveldinciu klasiu
   constructor(protected firstName: string, protected lastName: string) {}
 
@@ -9,8 +9,9 @@ export default class Person {
   }
 
   // imituojam abstakcia klase
-  calcPay() {
-    throw new Error('reikia aprasyti calcPay');
-  }
+  abstract calcPay(): number;
 }
+
+// new Person('james', 'band'); // Cannot create an instance of an abstract class
+
 console.log('EmployeeClass was loaded');

@@ -12,7 +12,7 @@ export default class Employee extends Person {
     this.hoursWorked += howMany;
   }
 
-  public override calcPay(): number {
+  public calcPay(): number {
     // console.log('skaiciuojam alga');
     // paskaiciuoti kiek gaunasi isdirbtas val padauginus is valandinio
     const alga = this.hoursWorked * this.hourlyPay;
