@@ -14,7 +14,18 @@ export default class UI {
     }
   }
 
-  // public static renderEm(arr: ) {}
+  public renderEmplSelect(arr: Employee[]) {
+    const selEl = document.getElementById('empl-sel') as HTMLSelectElement | null;
+    if (selEl === null) return console.warn('no select element found');
+    arr.forEach((empObj) => {
+      const opt = createHtmlEL<HTMLOptionElement>(
+        'option',
+        { value: empObj.printFullName() },
+        empObj.printFullName(),
+      );
+      selEl.append(opt);
+    });
+  }
 
   /*  
   <li class="list-group-item d-flex gap-2 align-items-center">

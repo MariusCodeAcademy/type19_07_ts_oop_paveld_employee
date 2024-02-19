@@ -11,6 +11,7 @@ const workingPplArr: Employee[] = [
   new Employee('James', 'Bond', 100),
   new Employee('Mike', 'dow', 50),
 ];
+ui.renderEmplSelect(workingPplArr);
 ui.addOneEmpl(workingPplArr[0]);
 ui.addOneEmpl(workingPplArr[1]);
 console.table(workingPplArr);
